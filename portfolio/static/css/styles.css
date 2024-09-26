@@ -24,13 +24,16 @@ body {
 
 .logo {
     position: relative;
-    font-size: 25px;
+    font-size: 40px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    cursor: default;
+    cursor: pointer;
     opacity: 0;
     animation: slideRight 1s ease forwards;
+}
+.logo:hover{
+    color: #0ef;
 }
 
 .navbar a {
@@ -48,6 +51,10 @@ body {
 }
 
 .navbar a:hover {
+    color: #0ef;
+}
+
+.header a:hover{
     color: #0ef;
 }
 
