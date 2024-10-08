@@ -1,1 +1,2 @@
-python 3.10
+Django==4.2.5  # Specify your Django version
+gunicorn==20.1.0  # If deploying to platforms like Heroku or Render
