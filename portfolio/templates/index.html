@@ -21,7 +21,6 @@
     });
   });
 </script>
-
 </head>
 <body>
     <header class="header"> 
@@ -33,6 +32,7 @@
             <a href="#project"  style="--i:4" >Projects</a>
             <a href="#contact"  style="--i:5" >Contact</a>       
         </nav>
+        <!-- Menu icon will be added by JavaScript -->
     </header>
     <section class="home">
         <div class="home-content">
@@ -56,7 +56,7 @@
         <div class="about-text">
             <h2>About <span>Me</span></h2>
             <h4>Data Science Apprentice</h4>
-            <p>I am a full stack developer and data science enthusiast with hands-on experience in building intelligent, scalable applications. With a solid foundation in Python and Django, I develop both dynamic front-end interfaces using HTML, CSS, and JavaScript, and robust back-end systems leveraging Django’s powerful capabilities. Currently interning in the field of Data Science with a focus on Generative AI and RAG (Retrieval-Augmented Generation), I actively work on real-world applications involving large language models and knowledge graphs. I have also developed a strong understanding of cloud technologies, particularly Microsoft Azure, enabling me to build and deploy cloud-native solutions. My combined skills in software development, machine learning, and cloud platforms position me to deliver innovative, end-to-end technology solutions.
+            <p>I am a full stack developer and data science enthusiast with hands-on experience in building intelligent, scalable applications. With a solid foundation in Python and Django, I develop both dynamic front-end interfaces using HTML, CSS, and JavaScript, and robust back-end systems leveraging Django's powerful capabilities. Currently interning in the field of Data Science with a focus on Generative AI and RAG (Retrieval-Augmented Generation), I actively work on real-world applications involving large language models and knowledge graphs. I have also developed a strong understanding of cloud technologies, particularly Microsoft Azure, enabling me to build and deploy cloud-native solutions. My combined skills in software development, machine learning, and cloud platforms position me to deliver innovative, end-to-end technology solutions.
           </p>
         </div>
     </section>
@@ -298,5 +298,8 @@
         <p>Developed with Love by Virendra Singh &copy;	2024 </p>
     </div>
 <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+
+<!-- Add mobile menu script -->
+<script src="{% static 'js/mobileMenu.js' %}"></script>
 </body>
 </html>
