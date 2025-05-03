@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-wxwl)rt$yr@1+rnb1!+u*
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # Update allowed hosts for Render deployment
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(','),'portfolio-tyh5.onrender.com']
+ALLOWED_HOSTS ='portfolio-tyh5.onrender.com'
 
 # Application definition
 INSTALLED_APPS = [
