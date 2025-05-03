@@ -7,7 +7,21 @@
     <title>Portfolio Virendra</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %} ">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>   
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var typed = new Typed(".text", {
+        strings: ['Python Development', 'Data Science', 'ML Engineering','Generative AI'],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true
+    });
+  });
+</script>
+
 </head>
 <body>
     <header class="header"> 
@@ -16,7 +30,7 @@
             <a href="#" style="--i:1">Home</a>
             <a href="#about"  style="--i:2" >About</a>
             <a href="#myskills"  style="--i:3" >Skills</a>
-            <a href="#project"  style="--i:4" >Portfolio</a>
+            <a href="#project"  style="--i:4" >Projects</a>
             <a href="#contact"  style="--i:5" >Contact</a>       
         </nav>
     </header>
@@ -24,8 +38,8 @@
         <div class="home-content">
             <h3>Hello, It's Me </h3>
             <h1>Virendra Singh</h1>
-            <h3>And I'm a <span class="text"></span> </h3><br>
-            <p>I am a final-year Engineering student specializing in Computer Science and Engineering. <br>With a strong foundation in data science, data analytics, and machine learning, <br> I am proficient in Python and Django, applying these skills to solve <br> real-world problems. I'm passionate about technology and continuously expanding my expertise in software development.
+            <h3>And I'm a capable in <span class="text"></span> </h3><br>
+            <p>I am a passionate tech enthusiast currently working in Data Science field, specializing in Generative AI and RAG (Retrieval-Augmented Generation). <br>With a strong foundation in Python, Django, Streamlit and Azure, I build full-stack web applications and develop AI-driven solutions. <br>I continuously expand my expertise across software development, data science, and cloud technologies to solve real-world problems.
             </p>
             <div class="home-sci">
                 <a href="https://www.linkedin.com/in/virendra-singh-a66467271/"  style="--i:7"  ><i class='bx bxl-linkedin'></i></a>
@@ -41,10 +55,9 @@
         </div>
         <div class="about-text">
             <h2>About <span>Me</span></h2>
-            <h4>Full Stack Developer!</h4>
-            <p>I am a full stack developer with a strong focus on Python and Django, capable of handling both front-end and back-end development. My skill set includes creating dynamic, responsive websites and applications using HTML, CSS, and JavaScript, while ensuring robust back-end functionality through Django's powerful framework. With a deep understanding of database management, APIs, and deployment, I can manage the full development lifecycle, from conceptual design to deployment and maintenance. My expertise in data science, analytics, and machine learning adds an extra layer of insight and innovation to my development projects.
-            </p>
-            <a href="#" class="btn-box" >More About Me</a>
+            <h4>Data Science Apprentice</h4>
+            <p>I am a full stack developer and data science enthusiast with hands-on experience in building intelligent, scalable applications. With a solid foundation in Python and Django, I develop both dynamic front-end interfaces using HTML, CSS, and JavaScript, and robust back-end systems leveraging Django’s powerful capabilities. Currently interning in the field of Data Science with a focus on Generative AI and RAG (Retrieval-Augmented Generation), I actively work on real-world applications involving large language models and knowledge graphs. I have also developed a strong understanding of cloud technologies, particularly Microsoft Azure, enabling me to build and deploy cloud-native solutions. My combined skills in software development, machine learning, and cloud platforms position me to deliver innovative, end-to-end technology solutions.
+          </p>
         </div>
     </section>
 
@@ -77,14 +90,14 @@
                                 <li><strong>Database (MongoDB):</strong> Efficient data storage and management with MongoDB for scalable applications.</li>
                             </ul>
                         </p>
-                        <a href="#" class="read">learn more</a>
+                        <a href="{% static 'certificate.pdf'%}" download class="read">learn more</a>
                     </div>
                     <div>
                         <i class="bx bxl-python" style="color: #00eeff;"></i>
                         <h2 >Python Development</h2>
                         <p style="font-size: larger;">"I offer robust Python development services, specializing in building scalable and efficient backend systems. With expertise in Django for web applications, I create dynamic and secure solutions tailored to your business needs. Whether it's automating tasks, integrating APIs, or developing custom software, my Python development ensures performance and reliability."
                         </p>
-                        <a href="" class="read">learn more</a>
+                        <a href="{% static 'python.png'%}" download class="read">learn more</a>
                     </div>
                 </div>
             </div>
@@ -163,8 +176,8 @@
                             <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
                             <circle class="path path-3" cx="100" cy="100" r="80"></circle>
                         </svg>
-                        <div class="precentage">85%</div>
-                        <div class="text">Problem Solving</div>
+                        <div class="precentage">80%</div>
+                        <div class="text">Team work</div>
                     </div>
                     <div class="radial-bar">
                         <svg x="0px" y="0px" viewBox="0 0 200 200">
@@ -172,7 +185,7 @@
                             <circle class="path path-4" cx="100" cy="100" r="80"></circle>
                         </svg>
                         <div class="precentage">89%</div>
-                        <div class="text">TeamWork</div>
+                        <div class="text">Problem Solving</div>
                     </div>
                 </div>
             </div>        
@@ -182,33 +195,58 @@
         <div id="portfolio" id="project">
             <div class="main-text" id="project">
                 <h2>Latest <span>Projects</span></h2>
-                <div class="portfolio-content">
-                    <div class="row">
-                        <img src="{% static 'img/image1.jpg'%}">
-                        <div class="layer">
-                            <h5>Machine Learning </h5>
-                            <p>Thyroid Disease Prediction Project </p>
-                            <a href="https://github.com/virendra1109/throid_upflairs"><i class="bx bx-link-external" style="color:aliceblue ;"></i></a>
+                    <div class="portfolio-content">
+                        <div class="row">
+                            <!-- Lottie animation instead of image -->
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                            <lottie-player
+                                src="{% static 'lotties/ml.json' %}"
+                                background="transparent"
+                                speed="1"
+                                loop
+                                autoplay>
+                            </lottie-player>
+                            <div class="layer">
+                                <h5>Machine Learning</h5>
+                                <p>Thyroid Disease Prediction Project</p>
+                                <a href="https://github.com/virendra1109/throid_upflairs"><i class="bx bx-link-external" style="color:aliceblue;"></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Lottie animation instead of image -->
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                            <lottie-player
+                                src="{% static 'lotties/cms.json' %}"
+                                background="transparent"
+                                speed="1"
+                                loop
+                                autoplay>
+                            </lottie-player>
+                            <div class="layer">
+                                <h5>Django</h5>
+                                <p>CampusConnect : A college management System</p>
+                                <a href="https://virendra110903.pythonanywhere.com/"><i class="bx bx-link-external" style="color:aliceblue;"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <img src="{% static 'img/image2.jpg' %}">
-                        <div class="layer">
-                            <h5>Django </h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, tempora! </p>
-                            <a href="#"><i class="bx bx-link-external" style="color:aliceblue ;"></i></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <img src="{% static 'img/image3.jpg' %}">
-                        <div class="layer">
-                            <h5>Recommendation System</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, tempora! </p>
-                            <a href="#"><i class="bx bx-link-external" style="color:aliceblue ;"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+                    <!-- Add this style to ensure the Lottie players display correctly -->
+                    <style>
+                        .row lottie-player {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                        
+                        /* If your original CSS was sizing the images, make sure it applies to lottie-player too */
+                        .row {
+                            position: relative;
+                            overflow: hidden;
+                            border-radius: 8px;
+                            cursor: pointer;
+                        }
+                    </style>         
+               </div>
         </div>
     </section>
 
@@ -230,14 +268,29 @@
             </div>
         </div>
 
+
         <div class="contact-form">
-            <form  method= "POST" action="">
-            {% csrf_token %}
+            {% if messages %}
+                <div class="messages-container" style="text-align: center; margin-bottom: 20px;">
+                    {% for message in messages %}
+                        <div class="message-with-animation {% if message.tags %}{{ message.tags }}{% endif %}">
+                            <!-- Lottie animation container -->
+                            <div id="lottie-success" style="width: 100px; height: 100px; margin: 0 auto;"></div>
+                            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" style="font-weight: bold; color: #4CAF50; font-size: 18px;">
+                                {{ message }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+            <form method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
                 <input type="text" placeholder="Enter Your Name" id='name' name='name' required>
                 <input type="email" placeholder="Enter Your Email" id='email' name='email' required>
                 <input type="text" placeholder="Enter Your Subject" id='subject' name='subject'>
                 <textarea name="message" id="message" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
-                <input type="submit" value="submit" class="send">
+                <input type="submit" value="Submit" class="send">
             </form>
         </div>
     </section>

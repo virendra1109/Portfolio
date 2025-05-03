@@ -430,7 +430,7 @@ circle.progress-bar{
     stroke: #0ef;
     fill: transparent;
     stroke-dasharray: 502;
-    stroke-dashoffset: 502;
+    stroke-dashoffset: 100;
     stroke-linecap: round;
 }
 .path-1{animation: animate-path1 1s 1s linear forwards ;}
@@ -450,7 +450,7 @@ circle.progress-bar{
 }
 @keyframes animate-path3{
     100%{
-        stroke-dashoffset: 125;
+        stroke-dashoffset: 10;
     }
 }
 @keyframes animate-path4{

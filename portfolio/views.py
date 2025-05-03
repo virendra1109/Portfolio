@@ -1,6 +1,35 @@
 from django.shortcuts import render,redirect
 from .models import Contact
+from django.core.mail import send_mail
+from django.contrib import messages
 
+# Your existing views...
+
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        
+        # Email body
+        email_body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
+        
+        # Send email
+        try:
+            send_mail(
+                f"Contact Form: {subject}",  # Email subject
+                email_body,  # Email body
+                email,  # From address (the visitor's email)
+                ['bannavirru6@gmail.com'],  # Your Gmail address
+                fail_silently=False,
+            )
+            # messages.success(request, 'Your message has been sent successfully!')
+            return redirect('home')  # Redirect to your home page after successful submission
+        except Exception as e:
+            messages.error(request, f'There was an error sending your message: {e}')
+    
+    return render(request, 'index.html')  # Assuming your form is on the index page
 
 # Create your views here.
 def index(request):
